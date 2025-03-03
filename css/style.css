@@ -1,0 +1,247 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: #D7B520;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 20px;
+}
+
+.container {
+    width: 80%;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+header img.header-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+header img.header-image:hover {
+    transform: scale(1.02);
+}
+
+.content {
+    display: flex;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+aside {
+    width: 30%;
+    margin-right: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: 1px solid #ddd;
+}
+
+nav ul li a:hover {
+    background-color: #e0e0e0;
+    transform: translateX(5px);
+}
+
+form {
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+form div {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+form label {
+    margin: 0; 
+    font-style: normal; 
+    font-size: 1em; 
+    color: #555; 
+}
+
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="checkbox"],
+form input[type="radio"] {
+    margin: 0;
+    margin-right: 10px;
+    width: auto;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #D7B520;
+    outline: none;
+}
+
+form button {
+    background-color: #D7B520;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #c0a01a;
+}
+
+main {
+    width: 70%;
+    box-sizing: border-box;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+section img.section-image {
+    float: left;
+    margin-right: 20px;
+    border-radius: 10px;
+    width: 400px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+section img.section-image:hover {
+    transform: scale(1.05);
+}
+
+section h2 {
+    color: #333;
+    margin-top: 0;
+    font-size: 1.5em;
+    border-bottom: 2px solid #D7B520;
+    padding-bottom: 10px;
+}
+
+section h3 {
+    color: #D7B520;
+    margin-top: 20px;
+    font-size: 1.3em;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+section ul li {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+section p {
+    color: #555;
+    text-align: justify;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    border-top: 2px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    color: #555;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    aside,
+    main {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    section img.section-image {
+        float: none;
+        display: block;
+        margin: 0 auto 15px;
+        width: 100%;
+    }
+
+    nav ul li a {
+        text-align: center;
+    }
+
+    form button {
+        width: 100%;
+    }
+}

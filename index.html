@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strandolós oldal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="img/strand.jpg" alt="Strand kép" class="header-image">
+        </header>
+        <div class="content">
+            <aside>
+                <nav>
+                    <ul>
+                        <li><a href="#balaton">Balaton</a></li>
+                        <li><a href="#tiszato">Tisza-tó</a></li>
+                        <li><a href="#szelidito">Szelidi-tó</a></li>
+                    </ul>
+                </nav>
+                <form>
+                    <h3>Kérem töltse ki a jelentkezési űrlapot</h3>
+                    <label for="name">Név</label>
+                    <input type="text" id="name" name="name" required maxlength="50" placeholder="Adja meg a nevét">
+
+                    <label for="email">E-mail cím</label>
+                    <input type="email" id="email" name="email" required maxlength="100"
+                        placeholder="Adja meg az e-mail címét">
+
+                    <label for="phone">Telefonszám</label>
+                    <input type="tel" id="phone" name="phone" required maxlength="15"
+                        placeholder="Adja meg a telefonszámát">
+
+                    <label for="lake">Melyik tó érdekli?</label>
+                    <select id="lake" name="lake">
+                        <option value="balaton">Balaton</option>
+                        <option value="tiszato">Tisza-tó</option>
+                        <option value="szelidito">Szelidi-tó</option>
+                    </select>
+
+                    <label>Milyen szállást keres?</label>
+                    <div>
+                        <input type="checkbox" id="hotel" name="accommodation" value="hotel">
+                        <label for="hotel">Szálloda</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="apartment" name="accommodation" value="apartment">
+                        <label for="apartment">Apartmanház</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="camping" name="accommodation" value="camping">
+                        <label for="camping">Kemping</label>
+                    </div>
+
+                    <label>Milyen ellátás legyen?</label>
+                    <div>
+                        <input type="radio" id="full" name="meal" value="full">
+                        <label for="full">Teljes</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="half" name="meal" value="half">
+                        <label for="half">Fél panzió</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="breakfast" name="meal" value="breakfast">
+                        <label for="breakfast">Csak reggeli</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="none" name="meal" value="none">
+                        <label for="none">Nem kérek ellátást</label>
+                    </div>
+
+                    <label for="message">Egyéb üzenet</label>
+                    <textarea id="message" name="message" maxlength="500" placeholder="Írjon üzenetet..."></textarea>
+
+                    <button type="submit">Mehet</button>
+                </form>
+            </aside>
+            <main>
+                <section id="balaton">
+                    <h2>Balaton</h2>
+                    <img src="img/balaton.jpg" alt="Balaton kép" class="section-image">
+                    <p>A Balaton Közép-Európa legnagyobb tava, Magyarország egyik legnépszerűbb üdülőhelye. A tó partján
+                        számos strand, város és falu található, amelyek minden évben több ezer turistát vonzanak. A
+                        Balaton nemcsak nyáron, hanem télen is sok látogatót vonz, különösen a Tihanyi-félsziget és a
+                        Badacsony környéke. A tó híres még borairól és gasztronómiai élményeiről is. A Balaton déli
+                        partja homokos strandjairól ismert, míg az északi part sziklás és természeti szépségeiről híres.
+                        A tó környékén számos kulturális és történelmi látnivaló is található, például a Tihanyi Apátság
+                        és a Festetics-kastély. A Balaton vízi sportokra is kiváló lehetőségeket kínál, például
+                        vitorlázás, szörfözés és kajakozás. A tó környékén számos borászat és borospincét is
+                        megtalálhatunk, ahol kiváló borokat kóstolhatunk meg. A Balaton télen is sok látogatót vonz,
+                        különösen a téli sportok és a gyógyfürdők miatt. A tó környékén számos kerékpárút és gyalogos
+                        túraútvonal található, amelyek kiválóak a természetjárás szerelmeseinek. A Balaton híres még a
+                        helyi gasztronómiájáról is, például a balatoni fogas és a halászlé. A tó partján számos
+                        fesztivál és rendezvény zajlik nyáron, amelyek még színesebbé teszik a helyi életet. A Balaton
+                        környéke ideális családok számára is, mivel számos családbarát program és szórakozási lehetőség
+                        található. A tó vizét gyakran nevezik "magyar tengernek", mivel a sekély víz és a homokos partok
+                        kiválóak a gyerekek számára. A Balaton környéke gazdag történelmi és kulturális örökségben,
+                        amelyet érdemes felfedezni. A tó partján számos kemping és apartmanház található, amelyek
+                        ideálisak a hosszabb pihenésre. A Balaton télen is sok látogatót vonz, különösen a téli sportok
+                        és a gyógyfürdők miatt.</p>
+
+                    <h3>Látnivalók</h3>
+                    <ul>
+                        <li>Tihanyi Apátság</li>
+                        <li>Badacsony borvidék</li>
+                        <li>Keszthelyi Festetics-kastély</li>
+                        <li>Balatonfüredi Tagore sétány</li>
+                    </ul>
+
+                    <h3>Tevékenységek</h3>
+                    <ul>
+                        <li>Vitorlázás</li>
+                        <li>Kerékpártúrák</li>
+                        <li>Horgászat</li>
+                        <li>Gyógyfürdők</li>
+                    </ul>
+
+                    <h3>Ételek és italok</h3>
+                    <p>A Balaton környéke híres a halászléjéről, a borairól és a helyi specialitásokról, mint például a
+                        balatoni fogas.</p>
+                </section>
+
+                <section id="tiszato">
+                    <h2>Tisza-tó</h2>
+                    <img src="img/tiszato.jpg" alt="Tisza-tó kép" class="section-image">
+                    <p>A Tisza-tó Magyarország második legnagyobb tava, amely a Tisza folyó szabályozása során jött
+                        létre. A tó környéke természeti szépségeiről és a vízi sportok lehetőségeiről híres. A Tisza-tó
+                        és környéke kiváló helyszín a horgászásra, túrázásra és a természet szerelmeseinek. A tó partján
+                        számos kemping és apartmanház található, amelyek ideálisak a családok számára. A Tisza-tó híres
+                        még madárvilágáról is, amely számos védett madárfajnak ad otthont. A tó környékén számos
+                        kerékpárút és gyalogos túraútvonal található, amelyek kiválóak a természetjárás szerelmeseinek.
+                        A Tisza-tó vízi sportokra is kiváló lehetőségeket kínál, például kajakozás, kenuzás és
+                        vitorlázás. A tó környékén számos étterem és kávézó található, ahol kiváló helyi specialitásokat
+                        kóstolhatunk meg. A Tisza-tó télen is sok látogatót vonz, különösen a téli sportok és a
+                        gyógyfürdők miatt. A tó környéke gazdag természeti látnivalókkal, például a Tisza-tavi
+                        madárrezervátummal. A Tisza-tó híres még a horgászati lehetőségeiről, amelyek minden évben sok
+                        horgászt vonzanak. A tó partján számos fesztivál és rendezvény zajlik nyáron, amelyek még
+                        színesebbé teszik a helyi életet. A Tisza-tó környéke ideális családok számára is, mivel számos
+                        családbarát program és szórakozási lehetőség található. A tó vizét gyakran nevezik "keleti
+                        tengernek", mivel a sekély víz és a természeti szépségek kiválóak a pihenésre. A Tisza-tó
+                        környéke gazdag történelmi és kulturális örökségben, amelyet érdemes felfedezni. A tó partján
+                        számos kemping és apartmanház található, amelyek ideálisak a hosszabb pihenésre. A Tisza-tó
+                        télen is sok látogatót vonz, különösen a téli sportok és a gyógyfürdők miatt.</p>
+
+                    <h3>Látnivalók</h3>
+                    <ul>
+                        <li>Tisza-tavi madárrezervátum</li>
+                        <li>Poroszlói Ökocentrum</li>
+                        <li>Abádszalóki strand</li>
+                    </ul>
+
+                    <h3>Tevékenységek</h3>
+                    <ul>
+                        <li>Kajakozás</li>
+                        <li>Horgászat</li>
+                        <li>Túrázás</li>
+                    </ul>
+
+                    <h3>Ételek és italok</h3>
+                    <p>A Tisza-tó környéke híres a friss halakról és a helyi borokról.</p>
+                </section>
+                <section id="szelidito">
+                    <h2>Szelidi-tó</h2>
+                    <img src="img/szelidito.jpg" alt="Szelidi-tó kép" class="section-image">
+                    <p>A Szelidi-tó egy mesterséges tó Dél-Magyarországon, amely kiváló lehetőségeket kínál a
+                        horgászásra és a pihenésre. A tó környéke természetvédelmi terület, így a látogatók számos
+                        védett növény- és állatfajt fedezhetnek fel. A Szelidi-tó híres még gyógyhatású iszapjáról is,
+                        amely számos betegség kezelésében segíthet. A tó partján kempingek és apartmanok találhatók,
+                        amelyek kényelmes szállást biztosítanak a látogatók számára. A Szelidi-tó környékén számos
+                        kerékpárút és gyalogos túraútvonal található, amelyek kiválóak a természetjárás szerelmeseinek.
+                        A tó vízi sportokra is kiváló lehetőségeket kínál, például kajakozás és kenuzás. A Szelidi-tó
+                        környékén számos étterem és kávézó található, ahol kiváló helyi specialitásokat kóstolhatunk
+                        meg. A tó télen is sok látogatót vonz, különösen a téli sportok és a gyógyfürdők miatt. A
+                        Szelidi-tó híres még a horgászati lehetőségeiről, amelyek minden évben sok horgászt vonzanak. A
+                        tó partján számos fesztivál és rendezvény zajlik nyáron, amelyek még színesebbé teszik a helyi
+                        életet. A Szelidi-tó környéke ideális családok számára is, mivel számos családbarát program és
+                        szórakozási lehetőség található. A tó vizét gyakran nevezik "déli gyöngyszemnek", mivel a
+                        természeti szépségek kiválóak a pihenésre. A Szelidi-tó környéke gazdag történelmi és kulturális
+                        örökségben, amelyet érdemes felfedezni. A tó partján számos kemping és apartmanház található,
+                        amelyek ideálisak a hosszabb pihenésre. A Szelidi-tó télen is sok látogatót vonz, különösen a
+                        téli sportok és a gyógyfürdők miatt.</p>
+
+                    <h3>Látnivalók</h3>
+                    <ul>
+                        <li>Szelidi-tavi madárrezervátum</li>
+                        <li>Gyógyiszap</li>
+                        <li>Környezeti tanösvények</li>
+                    </ul>
+
+                    <h3>Tevékenységek</h3>
+                    <ul>
+                        <li>Horgászat</li>
+                        <li>Természetjárás</li>
+                        <li>Kerékpártúrák</li>
+                    </ul>
+
+                    <h3>Ételek és italok</h3>
+                    <p>A Szelidi-tó környéke híres a friss halakról és a helyi specialitásokról.</p>
+                </section>
+            </main>
+        </div>
+        <footer>
+            <p>&copy; 2023 Strandolós oldal. Minden jog fenntartva.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
