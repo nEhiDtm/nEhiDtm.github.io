@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Airsoft Pro | Kezd el az Airsoftot!</title>
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Start Airsoft csomagok kezdőknek és haladóknak. Minden, amire az első játéknapodhoz szükséged van.">
+    <meta name="keywords"
+        content="airsoft kezdőknek, start csomag, airsoft fegyverek, felszerelés, novritsch, csomagajánlat">
+    <meta name="author" content="Csillagharcosistenkirály">
+
+    <!-- Open Graph (közösségi média megosztáshoz) -->
+    <meta property="og:title" content="Airsoft Pro - Start csomagok és ajánlatok">
+    <meta property="og:description"
+        content="Válassz az induló csomagjaink közül, és lépj pályára már az első nap teljes felszereléssel!">
+    <meta property="og:image" content="https://yourdomain.hu/images/start-preview.jpg">
+    <meta property="og:url" content="https://yourdomain.hu/start.html">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome és saját stílus -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/favico.png" type="image/png">
+</head>
+
+<body>
+    <!-- Fejléc / Navigáció -->
+    <header class="site-header">
+        <div class="top-bar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/favico.png" alt="Airsoft Pro logó">
+                </a>
+            </div>
+            <div class="top-info">
+                <p>Játékosoknak, játékosoktól.<br>Szállítás világszerte.</p>
+            </div>
+            <div class="top-actions">
+                <select class="lang-select">
+                    <option value="hu">HU</option>
+                    <option value="en">EN</option>
+                </select>
+                <a
+                    href="https://support.novritsch.com/novritsch-academy/?_gl=1*8ke5vn*_gcl_au*MTEwODgxODE0MS4xNzQxOTU5NTkw*_ga*MTI3Mzc3MjQ5My4xNzQxOTU5NTg1*_ga_B99L79801L*MTc0NDY2ODA3Ny4yMC4xLjE3NDQ2NjgwNzguNTkuMC4w">🎓
+                    Akadémia</a>
+                <a
+                    href="https://support.novritsch.com/?_gl=1%2A8ke5vn%2A_gcl_au%2AMTEwODgxODE0MS4xNzQxOTU5NTkw%2A_ga%2AMTI3Mzc3MjQ5My4xNzQxOTU5NTg1%2A_ga_B99L79801L%2AMTc0NDY2ODA3Ny4yMC4xLjE3NDQ2NjgwNzguNTkuMC4w">🌐
+                    Segítség</a>
+                <div class="login-wrapper">
+                    <a href="#" class="login-trigger" onclick="toggleLogin(event)">👤 Bejelentkezés / Regisztráció</a>
+                    <div class="login-panel" id="loginPanel">
+                        <div class="login-header">
+                            <h2>Bejelentkezés</h2>
+                            <a href="#">Fiók létrehozása</a>
+                        </div>
+
+                        <form>
+                            <label for="email">Felhasználónév vagy e-mail cím *</label>
+                            <input type="email" id="email" placeholder="pelda@email.com" required>
+
+                            <label for="password">Jelszó *</label>
+                            <div class="password-wrapper">
+                                <input type="password" id="password" required>
+                                <span class="toggle-password" onclick="togglePassword()">👁️</span>
+                            </div>
+
+                            <div class="remember-row">
+                                <input type="checkbox" id="remember">
+                                <label for="remember">Emlékezz rám</label>
+                            </div>
+
+                            <button type="submit" class="btn">Bejelentkezés</button>
+
+                            <div class="forgot-password">
+                                <a href="#">Elfelejtette a jelszavát?</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <span id="cart-count" class="cart-indicator">🛒 0</span>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">Főoldal</a></li>
+                <li><a href="#">Puskák</a></li>
+                <li><a href="#">Pisztolyok</a></li>
+                <li><a href="#">Lőszer</a></li>
+                <li><a href="#">Tartozékok</a></li>
+                <li><a href="#">Ruházat és felszerelés</a></li>
+                <li><a href="start.html" class="active">Kezd el az Airsoftot!</a></li>
+                <li><a href="palya.html" class="active">Airsoft Pályák</a></li>
+                <li><a href="termekek.html" class="active">Új termékek</a></li>
+                <li><a href="kapcsolat.html" class="active">Kapcsolat</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Tartalom -->
+    <main>
+        <section class="hero">
+            <h1>Kezd el az Airsoftot!</h1>
+            <p>Első lépések, hogy Te is részese lehess a taktikai élménynek!</p>
+        </section>
+
+        <section class="intro-grid">
+            <h2 class="section-title">🧭 Tudj meg mindent az airsoftról</h2>
+            <div class="grid-wrapper">
+                <div class="grid-box">
+                    <div class="icon">🚀</div>
+                    <h3>Hogyan kezdjük el</h3>
+                    <hr>
+                    <p>Válaszolunk minden kérdésedre a játéktípusokkal, a pályákkal és a közösséggel kapcsolatban. Hogy
+                        segítsünk elindulni a Airsoft útjára, megtanítjuk, hogy melyik fegyver ideális a kezdőknek, és
+                        milyen felszerelés illik hozzá. Szánj időt az egész sorozat végigolvasására, és az első
+                        játékodon nagy élményben lesz részed.</p>
+                </div>
+                <div class="grid-box">
+                    <div class="icon">📍</div>
+                    <h3>Hol lehet játszani</h3>
+                    <hr>
+                    <p>Ez a tanfolyam végigvezeti Önt azon a folyamaton, hogy felfedezze a megfelelő Airsoft
+                        helyszíneket az Ön területén, amelyek alkalmazkodnak a sportághoz és betartják a
+                        játékszabályokat. Megmutatja, hogyan kezdheted el a kutatást a Google és a Facebook
+                        csoportokban, hogy megtaláld a hivatalos pályákat, és biztonságos és élvezetes élményben legyen
+                        részed.</p>
+                </div>
+                <div class="grid-box">
+                    <div class="icon">📋</div>
+                    <h3>Alapvető szabályok</h3>
+                    <hr>
+                    <p>Most, hogy már tudod, hol és mikor fogsz játszani, az első játék előtt minden tippet és trükköt
+                        tudni akarsz majd. A Airsoft weboldalnak megvan a maga etikettje, szabályai és speciális
+                        kifejezései, amelyeket hasznos tudni.
+
+                        És ne feledd - az egész a szórakozásról szól!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="starter-bundles">
+            <h2>Start Airsoft Csomagok</h2>
+            <div class="bundle-grid">
+
+                <div class="bundle">
+                    <img src="img/csomag1.png" alt="Minimal csomag">
+                    <h3>Start Airsoft csomag – Minimal</h3>
+                    <div class="bundle-price">
+                        From: <del>€354.90</del> <strong>€333.50</strong>
+                    </div>
+                    <p>Ez a csomag a szükséges alapanyagokat kínálja, hogy az első naptól kezdve versenyképes legyen.
+                    </p>
+                    <button class="btn-cart">
+                        <span>🛒 Kosárba</span>
+                    </button>
+                </div>
+
+                <div class="bundle">
+                    <img src="img/csomag2.png" alt="Haladó csomag">
+                    <h3>Start Airsoft csomag – Haladó</h3>
+                    <div class="bundle-price">
+                        From: <del>€502.80</del> <strong>€454.59</strong>
+                    </div>
+                    <p>Ezzel a fejlett csomaggal egy harci övet kapsz, amely a leghatékonyabb módja a felszerelésed
+                        hordozásának.</p>
+                    <button class="btn-cart">
+                        <span>🛒 Kosárba</span>
+                    </button>
+                </div>
+
+                <div class="bundle">
+                    <img src="img/csomag3.png" alt="Complete csomag">
+                    <h3>Start Airsoft Bundle – Teljes</h3>
+                    <div class="bundle-price">
+                        From: <del>€791.70</del> <strong>€728.21</strong>
+                    </div>
+                    <p>A teljes csomag tartalmazza az SSR4-et és az SSP18 pisztolyt. Kiváló alap a komoly játékhoz.</p>
+                    <button class="btn-cart">
+                        <span>🛒 Kosárba</span>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Lábléc -->
+    <footer>
+        <div class="footer-top">
+            <p>Játékosoknak, játékosoktól.</p>
+            <div class="social">
+                <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://discord.com/"><i class="fab fa-discord"></i></a>
+                <a href="https://www.reddit.com/"><i class="fab fa-reddit-alien"></i></a>
+            </div>
+        </div>
+        <div class="footer-columns">
+            <div class="col">
+                <h4>Segítség</h4>
+                <ul>
+                    <li><a href="kapcsolat.html">Kapcsolat</a></li>
+                    <li><a href="#">Rendelések</a></li>
+                    <li><a href="#">Szállítás</a></li>
+                    <li><a href="#">Műszaki kérdések</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Tudj meg többet</h4>
+                <ul>
+                    <li><a href="start.html">Kezd el az Airsoftot</a></li>
+                    <li><a
+                            href="https://support.novritsch.com/novritsch-academy/?_gl=1*1r7pk0b*_gcl_au*MTEwODgxODE0MS4xNzQxOTU5NTkw*_ga*MTI3Mzc3MjQ5My4xNzQxOTU5NTg1*_ga_B99L79801L*MTc0NDY1NjM0NC4xOS4xLjE3NDQ2NTg0NjguMTEuMC4w">Airsoft
+                            Akadémia</a></li>
+                    <li><a href="https://blog.novritsch.com">Blog</a></li>
+                    <li><a href="https://novritschtrading.recruitee.com/">Karrier</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Airsoft Pro</h4>
+                <ul>
+                    <li><a href="#">Webshop</a></li>
+                    <li><a href="#">Viszonteladók</a></li>
+                    <li><a href="#">Áruház (Bp)</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Miért mi?</h4>
+                <p>Minden termékünket mi teszteljük terepen. Ha nem létezik, megtervezzük és megalkotjuk. Ez a mi
+                    szenvedélyünk.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Airsoft Pro. Minden jog fenntartva.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <button id="toTopBtn" title="Ugrás az elejére">⬆️</button>
+</body>
+
+</html>

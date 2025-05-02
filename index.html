@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Airsoft Pro | Főoldal</title>
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Airsoft kezdőknek és haladóknak. Fegyverek, felszerelés, tanácsok és induló csomagok egy helyen.">
+    <meta name="keywords" content="airsoft, kezdő airsoft, airsoft fegyverek, felszerelés, tactical, novritsch">
+    <meta name="author" content="Csillagharcosistenkirály">
+
+    <!-- Open Graph (Facebook, Messenger, stb.) -->
+    <meta property="og:title" content="Airsoft Pro - Kezd el az airsoftot profin!">
+    <meta property="og:description"
+        content="Nézd meg induló csomagjainkat, fegyvereinket és ajánlatainkat, és csatlakozz az airsoft közösséghez!">
+    <meta property="og:image" content="https://yourdomain.hu/images/preview.jpg">
+    <meta property="og:url" content="https://yourdomain.hu/">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Ikonok & Stílus -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/favico.png" type="image/png">
+</head>
+
+<body>
+    <!-- Fejléc / Navigáció -->
+    <header class="site-header">
+        <div class="top-bar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/favico.png" alt="Airsoft Pro logó">
+                </a>
+            </div>
+            <div class="top-info">
+                <p>Játékosoknak, játékosoktól.<br>Szállítás világszerte.</p>
+            </div>
+            <div class="top-actions">
+                <select class="lang-select">
+                    <option value="hu">HU</option>
+                    <option value="en">EN</option>
+                </select>
+                <a
+                    href="https://support.novritsch.com/novritsch-academy/?_gl=1*8ke5vn*_gcl_au*MTEwODgxODE0MS4xNzQxOTU5NTkw*_ga*MTI3Mzc3MjQ5My4xNzQxOTU5NTg1*_ga_B99L79801L*MTc0NDY2ODA3Ny4yMC4xLjE3NDQ2NjgwNzguNTkuMC4w">🎓
+                    Akadémia</a>
+                <a
+                    href="https://support.novritsch.com/?_gl=1%2A8ke5vn%2A_gcl_au%2AMTEwODgxODE0MS4xNzQxOTU5NTkw%2A_ga%2AMTI3Mzc3MjQ5My4xNzQxOTU5NTg1%2A_ga_B99L79801L%2AMTc0NDY2ODA3Ny4yMC4xLjE3NDQ2NjgwNzguNTkuMC4w">🌐
+                    Segítség</a>
+                <div class="login-wrapper">
+                    <a href="#" class="login-trigger" onclick="toggleLogin(event)">👤 Bejelentkezés / Regisztráció</a>
+                    <div class="login-panel" id="loginPanel">
+                        <div class="login-header">
+                            <h2>Bejelentkezés</h2>
+                            <a href="#">Fiók létrehozása</a>
+                        </div>
+
+                        <form>
+                            <label for="email">Felhasználónév vagy e-mail cím *</label>
+                            <input type="email" id="email" placeholder="pelda@email.com" required>
+
+                            <label for="password">Jelszó *</label>
+                            <div class="password-wrapper">
+                                <input type="password" id="password" required>
+                                <span class="toggle-password" onclick="togglePassword()">👁️</span>
+                            </div>
+
+                            <div class="remember-row">
+                                <input type="checkbox" id="remember">
+                                <label for="remember">Emlékezz rám</label>
+                            </div>
+
+                            <button type="submit" class="btn">Bejelentkezés</button>
+
+                            <div class="forgot-password">
+                                <a href="#">Elfelejtette a jelszavát?</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <span id="cart-count" class="cart-indicator">🛒 0</span>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">Főoldal</a></li>
+                <li><a href="#">Puskák</a></li>
+                <li><a href="#">Pisztolyok</a></li>
+                <li><a href="#">Lőszer</a></li>
+                <li><a href="#">Tartozékok</a></li>
+                <li><a href="#">Ruházat és felszerelés</a></li>
+                <li><a href="start.html" class="active">Kezd el az Airsoftot!</a></li>
+                <li><a href="palya.html" class="active">Airsoft Pályák</a></li>
+                <li><a href="termekek.html" class="active">Új termékek</a></li>
+                <li><a href="kapcsolat.html" class="active">Kapcsolat</a></li>
+                </ul>
+        </nav>
+    </header>
+
+    <!-- Tartalom -->
+    <main class="homepage">
+        <!-- Slider -->
+        <div class="slider">
+            <div class="slides">
+                <div class="slide active" style="background-image: url('img/slider1.webp');">
+                    <div>
+                        <h2>Kreuzotter érkezett!</h2>
+                        <p>Legyél te is láthatatlan a terepen!</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('img/slider2.jpg');">
+                    <div>
+                        <h2>SSG10 mesterlövész puska</h2>
+                        <p>A legnépszerűbb választás profi játékosoknak.</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('img/slider3.webp');">
+                    <div>
+                        <h2>SSR4 gépkarabély</h2>
+                        <p>Megbízható, pontos, mindenes.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+            <div class="dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+
+        <!-- Hero -->
+        <section class="hero">
+            <h1>Felkészültél a harcra?</h1>
+            <p>Fedezd fel airsoft fegyverek, felszerelések és kiegészítők hatalmas választékát.</p>
+            <a href="termekek.html" class="btn">Nézd meg a kínálatot</a>
+        </section>
+
+        <!-- Új termékek -->
+        <section class="new-products">
+            <h2 class="section-title">Új Termékek</h2>
+            <div class="product-grid">
+                <div class="card">
+                    <img src="img/ssg10mk2.webp" alt="SSG10">
+                    <h3>SSG10 MK2</h3>
+                    <p>Profi sniper kivitel, rendkívüli pontossággal.</p>
+                    <p><strong>119 990 Ft</strong></p>
+                    <button class="btn-cart">
+                        <span>🛒 Kosárba</span>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="img/ssx303.jpg" alt="SSX303">
+                    <h3>SSX303 DMR</h3>
+                    <p>DMR hibrid puska moduláris vázzal.</p>
+                    <p><strong>109 990 Ft</strong></p>
+                    <button class="btn-cart">
+                        <span>🛒 Kosárba</span>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="img/ssx23.png" alt="SSX23">
+                    <h3>SSX23</h3>
+                    <p>Csendes, gázüzemű pisztoly irányzékkal.</p>
+                    <p><strong>74 990 Ft</strong></p>
+                    <button class="btn-cart">
+                        <span>🛒 Kosárba</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Akciós ajánlat -->
+        <section class="promo">
+            <h2 class="section-title"> Heti ajánlat</h2>
+            <p class="promo-sub">Ne hagyd ki! Limitált készlet erejéig!</p>
+            <img src="img/deal.png" alt="Heti akció" class="promo-img">
+            <p><strong>SSR4 + Ajándék tár + Ingyenes szállítás</strong></p>
+            <p><del>104 990 Ft</del> <strong class="promo-price">89 990 Ft</strong></p>
+            <p class="countdown">⏳ Hátralévő idő: <span id="countdown">00:00:00</span></p>
+            <button class="btn">Megnézem</button>
+        </section>
+
+        <!-- Blog / Kezdőknek -->
+        <section class="blog-guide">
+            <h2 class="section-title">Kezd el az Airsoftot</h2>
+            <p class="blog-text">
+                Kíváncsi vagy, hogyan érdemes elkezdeni az airsoftot? Mire van szükséged, és mik az első lépések?
+                Készült egy útmutató, ami végigvezet a folyamaton.
+            </p>
+            <a href="https://blog.novritsch.com" class="btn" target="_blank">Ugrás az Airsoft Blogra</a>
+        </section>
+
+        <!--Vélemények-->
+        <section class="testimonials">
+            <h2 class="section-title">💬 Vásárlói vélemények</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p>„Az SSR4 hibátlanul működik, már a második játéknapon megvolt a kedvencem!”</p>
+                    <h4>– Gábor</h4>
+                </div>
+                <div class="testimonial">
+                    <p>„Nagyon gyors szállítás és profi ügyfélszolgálat. Csak innen rendelek!”</p>
+                    <h4>– Zsófi</h4>
+                </div>
+                <div class="testimonial">
+                    <p>„Az SSX23 hangtompítóval olyan csendes, hogy meglep mindenkit a pályán 😄”</p>
+                    <h4>– Laci</h4>
+                </div>
+            </div>
+        </section>
+
+        <!--Gyakori kérdés-->
+        <section class="faq">
+            <h2 class="section-title">❓ Gyakori kérdések</h2>
+            <div class="faq-item">
+                <button class="faq-question">Kell engedély az airsofthoz?</button>
+                <div class="faq-answer">Nem, Magyarországon az airsoft fegyverek használatához nem kell engedély, de
+                    csak 18 év felettiek használhatják szabályosan.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Mi az az AEG és GBB?</button>
+                <div class="faq-answer">AEG: elektromos fegyver, GBB: gázüzemű, „Gas Blowback”. Mindkettő népszerű
+                    airsoft típus.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Mennyi idő a szállítás?</button>
+                <div class="faq-answer">Általában 1-3 munkanap. Akciók idején előfordulhat minimális csúszás.</div>
+            </div>
+        </section>
+
+
+        <!--Miért minket válassz-->
+        <section class="why-us">
+            <h2 class="section-title"> Miért minket válassz?</h2>
+            <div class="why-grid">
+                <div class="why-box">
+                    <h3>Villámgyors szállítás</h3>
+                    <p>1-3 munkanapos kézbesítés, raktárról, utánvéttel is.</p>
+                </div>
+                <div class="why-box">
+                    <h3>Saját fejlesztésű termékek</h3>
+                    <p>Minőség, amit játékosok terveznek játékosoknak.</p>
+                </div>
+                <div class="why-box">
+                    <h3>Segítőkész ügyfélszolgálat</h3>
+                    <p>Bármilyen kérdésed van, barátságos csapatunk segít.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lábléc -->
+        <footer>
+            <div class="footer-top">
+                <p>Játékosoknak, játékosoktól.</p>
+                <div class="social">
+                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://discord.com/"><i class="fab fa-discord"></i></a>
+                    <a href="https://www.reddit.com/"><i class="fab fa-reddit-alien"></i></a>
+                </div>
+            </div>
+            <div class="footer-columns">
+                <div class="col">
+                    <h4>Segítség</h4>
+                    <ul>
+                        <li><a href="kapcsolat.html">Kapcsolat</a></li>
+                        <li><a href="#">Rendelések</a></li>
+                        <li><a href="#">Szállítás</a></li>
+                        <li><a href="#">Műszaki kérdések</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Tudj meg többet</h4>
+                    <ul>
+                        <li><a href="start.html">Kezd el az Airsoftot</a></li>
+                        <li><a
+                                href="https://support.novritsch.com/novritsch-academy/?_gl=1*1r7pk0b*_gcl_au*MTEwODgxODE0MS4xNzQxOTU5NTkw*_ga*MTI3Mzc3MjQ5My4xNzQxOTU5NTg1*_ga_B99L79801L*MTc0NDY1NjM0NC4xOS4xLjE3NDQ2NTg0NjguMTEuMC4w">Airsoft
+                                Akadémia</a></li>
+                        <li><a href="https://blog.novritsch.com">Blog</a></li>
+                        <li><a href="https://novritschtrading.recruitee.com/">Karrier</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Airsoft Pro</h4>
+                    <ul>
+                        <li><a href="#">Webshop</a></li>
+                        <li><a href="#">Viszonteladók</a></li>
+                        <li><a href="#">Áruház (Bp)</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Miért mi?</h4>
+                    <p>Minden termékünket mi teszteljük terepen. Ha nem létezik, megtervezzük és megalkotjuk. Ez a mi
+                        szenvedélyünk.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Airsoft Pro. Minden jog fenntartva.</p>
+            </div>
+        </footer>
+        <script src="js/script.js"></script>
+        <button id="toTopBtn" title="Ugrás az elejére">⬆️</button>
+</body>
+
+</html>

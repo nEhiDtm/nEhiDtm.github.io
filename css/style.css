@@ -1,0 +1,1279 @@
+/* =============================== */
+/*        ALAP STÍLUSOK          */
+/* =============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f9f9f9;
+    color: #222;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #e31937;
+}
+
+/* =============================== */
+/*             HEADER             */
+/* =============================== */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.top-info p {
+    font-size: 13px;
+    color: #555;
+    text-align: center;
+}
+
+.top-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.lang-select {
+    padding: 4px 6px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #222;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.lang-select option {
+    background-color: #fff;
+    color: #222;
+}
+
+.main-nav {
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 12px 0;
+}
+
+.main-nav li a {
+    font-weight: 700;
+    color: #333;
+    font-size: 15px;
+}
+
+.main-nav li a:hover,
+.main-nav li a.active {
+    color: #e31937;
+}
+
+/* =============================== */
+/*              HERO              */
+/* =============================== */
+.hero {
+    padding: 60px 20px;
+    background: linear-gradient(to right, #111, #222);
+    color: #fff;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* =============================== */
+/*              SLIDER            */
+/* =============================== */
+.slider {
+    position: relative;
+    max-width: 100%;
+    height: 500px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slide h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.slide p {
+    font-size: 18px;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 36px;
+    color: #fff;
+    background: none;
+    border: none;
+    padding: 10px;
+    z-index: 2;
+    transition: transform 0.2s;
+}
+
+.prev:hover,
+.next:hover {
+    transform: translateY(-50%) scale(1.2);
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.dots {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+}
+
+.dot {
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active,
+.dot:hover {
+    background-color: #e31937;
+}
+
+/* =============================== */
+/*              GOMB              */
+/* =============================== */
+.btn {
+    background-color: #e31937;
+    color: #fff;
+    padding: 12px 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #c91630;
+    color: #fff;
+}
+
+/* =============================== */
+/*         TERMÉKEK / KÁRTYÁK     */
+/* =============================== */
+.section-title {
+    margin-bottom: 30px;
+    font-size: 28px;
+    text-align: center;
+    padding: 60px 20px 0;
+}
+
+.featured-products,
+.new-products {
+    padding: 0 20px 80px;
+    text-align: center;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    max-width: 300px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .card p {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 15px;
+    flex-grow: 1; 
+  }
+  
+  .card .btn {
+    margin-top: auto; 
+  }
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    margin-bottom: 15px;
+}
+
+/* =============================== */
+/*         AKCIÓS AJÁNLAT         */
+/* =============================== */
+.promo {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f5f5f5;
+}
+
+.promo-sub {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.promo-img {
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.promo-price {
+    color: #e31937;
+    font-size: 20px;
+    font-weight: bold;
+    animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.05);
+    }
+}
+
+.countdown {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0 20px;
+}
+
+/* =============================== */
+/*            BLOG / ÚTMUTATÓ     */
+/* =============================== */
+.blog-guide {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.blog-text {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* =============================== */
+/*           VÁSÁRLÓI VÉLEMÉNYEK  */
+/* =============================== */
+.testimonials {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.testimonial-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.testimonial {
+    max-width: 300px;
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.testimonial h4 {
+    color: #e31937;
+    font-weight: bold;
+}
+
+/* =============================== */
+/*               GYIK             */
+/* =============================== */
+.faq {
+    padding: 60px 20px;
+    background-color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-question {
+    width: 100%;
+    background-color: #e31937;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    text-align: left;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.faq-question:hover {
+    background-color: #c91630;
+}
+
+.faq-answer {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 3px solid #e31937;
+    margin-top: 5px;
+    display: none;
+}
+
+/* =============================== */
+/*     MIÉRT MINKET VÁLASSZ       */
+/* =============================== */
+.why-us {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.why-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.why-box {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    max-width: 300px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.why-box h3 {
+    color: #e31937;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.why-box p {
+    font-size: 14px;
+    color: #444;
+}
+
+/* =============================== */
+/*           START AIRSOFT        */
+/* =============================== */
+.intro-grid {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.grid-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid-box {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 25px;
+    max-width: 320px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.grid-box .icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.grid-box h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.grid-box p {
+    font-size: 15px;
+    color: #444;
+}
+
+.grid-box hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 15px auto;
+    width: 50%;
+}
+
+/* =============================== */
+/*        OLDAL TETEJÉRE GOMB     */
+/* =============================== */
+#toTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    background: linear-gradient(135deg, #e31937, #c91630);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#toTopBtn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+    background-color: #c91630;
+}
+
+
+/* =============================== */
+/*              LÁBLÉC            */
+/* =============================== */
+footer {
+    background-color: #111;
+    color: #ddd;
+    padding: 40px 20px 20px;
+}
+
+.footer-top {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.footer-top .social a {
+    font-size: 20px;
+    color: #fff;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.footer-top .social a:hover {
+    color: #e31937;
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+}
+
+.footer-columns h4 {
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 16px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+}
+
+.footer-columns ul li {
+    margin-bottom: 8px;
+}
+
+.footer-columns ul li a {
+    color: #bbb;
+    transition: 0.3s;
+}
+
+.footer-columns ul li a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 13px;
+    color: #888;
+    border-top: 1px solid #222;
+    padding-top: 15px;
+}
+
+
+/*         RESPONSIVE LAYOUT      */
+
+@media (max-width: 768px) {
+    .main-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .grid-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-actions {
+        justify-content: center;
+    }
+}
+
+/* STARTER CSOMAGOK (Start Airsoft stílus) */
+.starter-bundles {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.bundle-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bundle {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 350px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.bundle:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.bundle img {
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.bundle h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.bundle-price {
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.bundle-price del {
+    color: #888;
+    margin-right: 5px;
+}
+
+.bundle-price strong {
+    color: #e31937;
+    font-size: 18px;
+}
+
+.bundle p {
+    font-size: 14px;
+    color: #444;
+    flex-grow: 1;
+    margin-bottom: 14px;
+}
+
+.btn-cart {
+    background-color: #e31937;
+    color: #fff;
+    padding: 12px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: auto;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-cart:hover {
+    background-color: #c91630;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+
+
+@media (max-width: 768px) {
+    .bundle-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Sticky menü */
+.main-nav.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInDown 0.3s ease-in-out;
+    background-color: #fff;
+}
+
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*Bejelentkezési panel */
+.login-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.login-panel {
+    display: none;
+    position: absolute;
+    top: 110%;
+    right: 0;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    width: 320px;
+    font-size: 14px;
+}
+
+.login-panel.active {
+    display: block;
+}
+
+.login-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.login-header h2 {
+    font-size: 20px;
+}
+
+.login-header a {
+    font-size: 13px;
+    color: #e31937;
+}
+
+.login-panel label {
+    display: block;
+    margin: 12px 0 5px;
+    font-weight: 600;
+}
+
+.login-panel input[type="email"],
+.login-panel input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.remember-row {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.forgot-password a {
+    color: #e31937;
+    font-size: 13px;
+}
+
+/*  Pályák oldal  */
+.palya-intro {
+    text-align: center;
+    padding: 60px 20px 30px;
+    background-color: #f9f9f9;
+}
+
+.palya-intro h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.palya-intro p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #555;
+}
+
+.palya-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px 60px;
+}
+
+.palya-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 480px;
+}
+
+.palya-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.palya-card img {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.palya-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.palya-card p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.palya-card .btn {
+    margin-top: 10px;
+    font-size: 14px;
+    padding: 10px 18px;
+}
+
+@media (max-width: 768px) {
+    .palya-card {
+        width: 100%;
+        max-width: 90%;
+    }
+}
+
+/*  Pályák térképes szakasz  */
+.palya-map {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.palya-map h2 {
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+
+.map-container {
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/*  Kapcsolat oldal  */
+.contact-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact-section h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.contact-section p {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    text-align: left;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.contact-form label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.contact-form .form-check {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    margin-top: 20px;
+}
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+    
+  .form-check input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+  }
+    
+  .form-check label {
+    cursor: pointer;
+    line-height: 1.2;
+    color: #333;
+  }
+
+.contact-form .btn {
+    margin-top: 20px;
+    background: #e31937;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-form .btn:hover {
+    background: #c4152f;
+}
+
+.form-response {
+    margin-top: 15px;
+    font-size: 14px;
+    color: green;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.contact-info i {
+    margin-right: 8px;
+    color: #e31937;
+}
+
+/* ======= Termékek oldal ======= */
+.termekek-intro {
+    text-align: center;
+    padding: 60px 20px 30px;
+}
+
+.termekek-intro h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.termekek-intro p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #555;
+}
+
+.termekek-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.termek-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.termek-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.termek-card img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.termek-card p {
+    margin-bottom: 10px;
+}
+
+.termek-card .btn {
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.termekek-table {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.termekek-table h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.termekek-table table {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.termekek-table th,
+.termekek-table td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    font-size: 15px;
+}
+
+.termekek-table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.termekek-bemutato {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.termekek-bemutato h2 {
+    font-size: 26px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.termek-jellemzok {
+    margin-top: 20px;
+    padding-left: 20px;
+    list-style-type: disc;
+    color: #333;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.termek-jellemzok li {
+    margin-bottom: 8px;
+}
+
+/* ======= Termékbemutató (Flex) ======= */
+.termek-bemutato-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.bemutato-img {
+    flex: 1 1 300px;
+    max-width: 400px;
+}
+
+.gallery-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.main-product-image {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.thumbnail-gallery img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.3s;
+    border: 2px solid transparent;
+}
+
+.thumbnail-gallery img:hover,
+.thumbnail-gallery img.active {
+    opacity: 1;
+    border-color: #e31937;
+}
+
+.bemutato-szoveg {
+    flex: 1 1 500px;
+}
+
+
+
+@media (max-width: 768px) {
+    .termek-bemutato-flex {
+        flex-direction: column;
+    }
+
+    .bemutato-img,
+    .bemutato-szoveg {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .gallery-column {
+        align-items: flex-start;
+    }
+}
+
+
+
+/* ======= YouTube hover videó stílus ======= */
+.yt-box {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.yt-box img,
+.yt-box iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.4s ease;
+    border: none;
+}
+
+.yt-video {
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.yt-hover-card:hover .yt-video {
+    opacity: 1;
+}
+
+.yt-hover-card:hover .yt-thumbnail {
+    opacity: 0;
+}
